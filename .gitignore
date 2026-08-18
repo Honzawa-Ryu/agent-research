@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 論文PDFの実体はリポジトリに含めない（著作権・容量対策）
+# 書誌情報・リンクは papers/index.md で管理する。フォルダ構造保持用の .gitkeep は追跡対象。
+topics/**/papers/pdfs/*.pdf
+
+# ローカルの一時ファイル
+*.tmp
