@@ -9,20 +9,13 @@
 
 | 実施年月 | テーマ / タイトル | カテゴリ / タグ | レポート | 主な結論・ハイライト | 収集論文数 |
 |:---:|:---|:---|:---:|:---|:---:|
-| - | *(まだ完了した調査はありません)* | - | - | - | - |
-
-<!-- 
-追記例:
-| 2026-08 | 病理画像分野における画像認識AIの活用と最新研究 | `#病理画像` `#WSI` `#FoundationModel` | [Report](topics/2026/08/01_pathology_ai_vision/report.md) | UNI/CONCHなどの基盤モデルが主流化、Zero-shot分類とマルチモーダル統合が加速 | 8件 |
--->
+| 2026-08 | 毒性病理画像と疾患病理画像の違い・共通点と未開拓な応用可能「ねらい目」技術 | `#毒性病理` `#疾患病理` `#基盤モデル` `#弱教師あり学習` `#トキシコゲノミクス` | [Report](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md) | 個別診断(N=1)の疾患病理に対し、毒性病理は群間比較・用量反応・40+臓器スクリーニングが本質。動物種横断基盤モデル、用量反応MIL、背景病変差分異常検知、INHAND準拠VLM、Patho-TGx、連合学習の6大ねらい目技術を体系化。 | 10件 (PDF 6件) |
 
 ---
 
 ## 🏷 カテゴリ・タグ別クイックリンク
 
-*(調査の蓄積に応じてAgentがタグ別に分類を整理します)*
-
-- **病理画像 / 医用画像 (Medical AI / Pathology)**
-  - *(準備中)*
-- **基盤モデル / マルチモーダル (Foundation Models / Multimodal)**
-  - *(準備中)*
+- **病理画像 / 創薬安全性 (Digital Pathology & Safety AI)**
+  - [2026-08] [毒性病理画像と疾患病理画像の違い・共通点と未開拓な応用可能「ねらい目」技術](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
+- **基盤モデル / マルチモーダル (Foundation Models & Multimodal)**
+  - [2026-08] [毒性病理画像と疾患病理画像の違い・共通点と未開拓な応用可能「ねらい目」技術](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
