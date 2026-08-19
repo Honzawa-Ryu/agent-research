@@ -158,7 +158,7 @@
 
 - **提案日**: 2026-08-19
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)（7章 オープンクエスチョン2「微小毒性変化の検出限界」）
-- **ステータス**: `提案中`
+- **ステータス**: `調査完了` → [topics/2026/08/09_virtual_ultrastructure_inference/](topics/2026/08/09_virtual_ultrastructure_inference/report.md)
 - **優先度**: `中`
 - **タグ**: `#LabelFreePrediction` `#VirtualStaining` `#超解像` `#電子顕微鏡` `#ミトコンドリア毒性`
 
