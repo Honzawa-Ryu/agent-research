@@ -32,7 +32,7 @@
 
 - **提案日**: 2026-08-18
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
-- **ステータス**: `提案中`
+- **ステータス**: `調査完了` → [topics/2026/08/04_dose_response_hierarchical_mil/](topics/2026/08/04_dose_response_hierarchical_mil/report.md)
 - **優先度**: `高`
 - **タグ**: `#弱教師あり学習` `#MIL` `#用量反応性` `#DoseResponse` `#PfizerTRACE`
 
