@@ -116,7 +116,7 @@
 
 - **提案日**: 2026-08-18
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
-- **ステータス**: `提案中`
+- **ステータス**: `調査完了` → [topics/2026/08/07_federated_learning_toxpath/](topics/2026/08/07_federated_learning_toxpath/report.md)
 - **優先度**: `低`
 - **タグ**: `#連合学習` `#MELLODDY` `#プライバシー保護` `#業界コンソーシアム`
 
