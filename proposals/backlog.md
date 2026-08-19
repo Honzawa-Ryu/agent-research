@@ -179,7 +179,7 @@
 
 - **提案日**: 2026-08-19
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)（4.2節「GLPとバリデーションの厳格さ」、7章 オープンクエスチョン3「GLP規制当局とのコンセンサス形成」）
-- **ステータス**: `提案中`
+- **ステータス**: `調査完了` → [topics/2026/08/10_glp_ai_validation_framework/](topics/2026/08/10_glp_ai_validation_framework/report.md)
 - **優先度**: `高`
 - **タグ**: `#GLP` `#GoodMachineLearningPractice` `#FDA` `#PMDA` `#規制科学` `#21CFRPart11`
 
