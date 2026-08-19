@@ -16,6 +16,7 @@
 | 2026-08 | Open TG-GATEsを活用したトキシコゲノミクス×毒性病理WSIマルチモーダルAI（Patho-TGx）の先行研究とベンチマーク調査 | `#トキシコゲノミクス` `#OpenTGGATEs` `#マルチモーダル` `#VirtualPathology` `#GEESE` `#TANGLE` | [Report](topics/2026/08/05_patho_toxicogenomics/report.md) | 順方向(WSI→遺伝子発現)はGEESE(Jaume 2024)がTG-GATEs全156試験規模で実装済み、病変分類macro-AUC 98.9%だが発現量回帰はr=0.29と精度に非対称性。逆方向(化合物構造→仮想病理像生成)はPathologAI原著者が構想を明記するも2026年8月時点で未実装のまま。TANGLEがヒト+ラット肝臓データで動物種横断とトキシコゲノミクス統合を意図せず橋渡ししている点を新規発見。 | 10件 (PDF 4件) |
 | 2026-08 | INHAND国際オントロジー準拠のVision-Language基盤モデル＆Concept Bottleneck Model設計の先行事例調査 | `#VisionLanguage` `#ConceptBottleneck` `#INHAND` `#説明可能AI` `#GLP規制` `#ConceptCLIP` | [Report](topics/2026/08/06_inhand_vlm_concept_bottleneck/report.md) | 「INHAND×VLM/CBM」の直接統合研究は一次文献上不在(獣医病理NLP最新レビューStimmer 2025も同分野を「ほぼ未開拓」と明言)。要素技術(Label-free Concept MIL, Clinical-Knowledge CBM, ConceptCLIPのUMLS概念源)は疾患病理側で成熟済みで転用は射程内だが、INHAND定義文を機械可読な概念ラベル集合へ構造化する工程が最大のボトルネックと特定。現行毒性病理SOTA(TRACE, PathologAI)は精度は高いが概念レベルの説明可能性を持たない。 | 10件 |
 | 2026-08 | MELLODDY型・製薬企業間連合学習コンソーシアムの毒性病理領域への応用可能性と実装障壁 | `#連合学習` `#MELLODDY` `#プライバシー保護` `#業界コンソーシアム` `#SecureAggregation` `#毒性病理` | [Report](topics/2026/08/07_federated_learning_toxpath/report.md) | 既存レポート(01)のMELLODDY記述を訂正：主機構はSecure Aggregation(SMPC)で準同型暗号は不採用。「毒性病理WSI×連合学習」の直接実装例は皆無だが、隣接2領域(連合学習×臨床WSI、連合学習×毒性QSAR)はそれぞれ実績あり。Rocheが臨床病理WSIで連合学習を実運用検証済み(Schoenpflug 2025)。準同型暗号のWSIスケール適用はサーバコスト15,621倍増と依然重い。 | 10件 |
+| 2026-08 | 動物毒性所見のヒト外挿性（Translational Toxicology）予測モデルの先行研究調査 | `#TranslationalToxicology` `#種差外挿` `#DILI` `#DILIrank` `#PathologAI` `#知識グラフ` | [Report](topics/2026/08/08_translational_toxicology_extrapolation/report.md) | DILIrank著者とラット肝WSI分類(PathologAI)著者が同一研究グループ(FDA/NCTR, Weida Tong)でありながら両者を接続する研究は不在という具体的ホワイトスペースを発見。「WSI形態→ヒト有害事象」の直接統合研究は皆無、既存は遺伝子発現翻訳(GPDモデルAUROC 0.50→0.75)や化学構造ベースのToxKG+GNN(Tox21平均AUC 0.911)に留まる。 | 11件 |
 
 ---
 
@@ -44,3 +45,5 @@
   - [2026-08] [INHAND国際オントロジー準拠のVision-Language基盤モデル＆Concept Bottleneck Model設計の先行事例調査](topics/2026/08/06_inhand_vlm_concept_bottleneck/report.md)
 - **連合学習 / プライバシー保護 (Federated Learning & Privacy)**
   - [2026-08] [MELLODDY型・製薬企業間連合学習コンソーシアムの毒性病理領域への応用可能性と実装障壁](topics/2026/08/07_federated_learning_toxpath/report.md)
+- **トランスレーショナル毒性学 / 種差外挿 (Translational Toxicology)**
+  - [2026-08] [動物毒性所見のヒト外挿性（Translational Toxicology）予測モデルの先行研究調査](topics/2026/08/08_translational_toxicology_extrapolation/report.md)

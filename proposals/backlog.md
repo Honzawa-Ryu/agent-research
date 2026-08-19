@@ -137,7 +137,7 @@
 
 - **提案日**: 2026-08-19
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)（7章 オープンクエスチョン1「種差外挿の生物学的限界」）
-- **ステータス**: `提案中`
+- **ステータス**: `調査完了` → [topics/2026/08/08_translational_toxicology_extrapolation/](topics/2026/08/08_translational_toxicology_extrapolation/report.md)
 - **優先度**: `高`
 - **タグ**: `#TranslationalToxicology` `#種差外挿` `#DILI` `#creative-outcome-prediction`
 
