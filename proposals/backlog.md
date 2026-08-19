@@ -11,7 +11,7 @@
 
 - **提案日**: 2026-08-18
 - **関連する過去の調査**: [topics/2026/08/01_toxicology_vs_clinical_pathology/](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
-- **ステータス**: `調査中` → [topics/2026/08/02_cross_species_pathology_fm/](topics/2026/08/02_cross_species_pathology_fm/report.md)
+- **ステータス**: `調査完了` → [topics/2026/08/02_cross_species_pathology_fm/](topics/2026/08/02_cross_species_pathology_fm/report.md)
 - **優先度**: `高`
 - **タグ**: `#基盤モデル` `#CrossSpecies` `#ドメイン適応` `#毒性病理`
 
