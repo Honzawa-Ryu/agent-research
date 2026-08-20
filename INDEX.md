@@ -19,6 +19,7 @@
 | 2026-08 | 動物毒性所見のヒト外挿性（Translational Toxicology）予測モデルの先行研究調査 | `#TranslationalToxicology` `#種差外挿` `#DILI` `#DILIrank` `#PathologAI` `#知識グラフ` | [Report](topics/2026/08/08_translational_toxicology_extrapolation/report.md) | DILIrank著者とラット肝WSI分類(PathologAI)著者が同一研究グループ(FDA/NCTR, Weida Tong)でありながら両者を接続する研究は不在という具体的ホワイトスペースを発見。「WSI形態→ヒト有害事象」の直接統合研究は皆無、既存は遺伝子発現翻訳(GPDモデルAUROC 0.50→0.75)や化学構造ベースのToxKG+GNN(Tox21平均AUC 0.911)に留まる。 | 11件 |
 | 2026-08 | 光顕WSIからの微小構造推定（Virtual Ultrastructure / Sub-resolution Toxicity Inference）の実現可能性調査 | `#LabelFreePrediction` `#VirtualStaining` `#超解像` `#電子顕微鏡` `#ミトコンドリア毒性` `#CLEM` | [Report](topics/2026/08/09_virtual_ultrastructure_inference/report.md) | 「HE-WSI→EM相当微細構造」を直接予測する研究は一次文献上不在。既存は光顕内変換(Label-free Prediction/Virtual Staining)・EM内強化(EMDiffuse)・CLEM位置合わせ(粗い相互予測)のいずれかに分類され、光顕→EM方向(情報創出方向)の前例は皆無。毒性病理特有のFFPE/TEM前処理の不整合と公開ペアデータの不在も確認。 | 10件 |
 | 2026-08 | GLP規制環境下でのAIバリデーション・信頼性保証フレームワーク（Good Machine Learning Practice for GLP Toxicologic Pathology）調査 | `#GLP` `#GoodMachineLearningPractice` `#FDA` `#PMDA` `#規制科学` `#21CFRPart11` | [Report](topics/2026/08/10_glp_ai_validation_framework/report.md) | GLP毒性病理AI専用のFDA/PMDA/EMAガイダンスは不在だが、基盤3層(SaMD向け一般AIガイダンスGMLP/PCCP/透明性原則、非臨床WSI規制基盤、専門家意見論文)は確立済みで統合作業が未着手と特定。Pohlmeyer-Esch 2025の三段階同等性検証・ISPE6段階成熟度モデルが最有力の出発点だが、AI陰性除外の感度/NPV数値受容基準を定めた文献は皆無。 | 10件 |
+| 2026-08 | UNI/UNI2病理基盤モデルの動物（非ヒト）組織画像への適用事例と限界・改善策の網羅調査 | `#UNI` `#UNI2` `#基盤モデル` `#動物病理` `#獣医病理` `#LoRA` `#MIDOG` `#毒性病理` | [Report](topics/2026/08/11_uni_animal_pathology_transfer/report.md) | topic02の「UNI動物適用はSlootweg 2025のみ」を更新：有糸分裂像分類・検出という腫瘍病理ニッチ(MIDOG/CCMCT, イヌ/ネコ)でUNI/UNI2-hを適用した研究を新たに4件発見(Ganz 2024, Ammeling 2026, Banerjee 2026, Ramchandani 2025)。毒性病理(非腫瘍性病変)特化ではSlootweg 2025のみで変わらず。「FM=自動的に頑健」への反証(Ganz 2024)と、LoRAがOOD AUCを0.6台→0.85-0.88に改善する再現性の高い知見(Ammeling 2026)が主要発見。 | 8件 |
 
 ---
 
@@ -32,11 +33,13 @@
   - [2026-08] [Open TG-GATEsを活用したトキシコゲノミクス×毒性病理WSIマルチモーダルAI（Patho-TGx）の先行研究とベンチマーク調査](topics/2026/08/05_patho_toxicogenomics/report.md)
   - [2026-08] [INHAND国際オントロジー準拠のVision-Language基盤モデル＆Concept Bottleneck Model設計の先行事例調査](topics/2026/08/06_inhand_vlm_concept_bottleneck/report.md)
   - [2026-08] [MELLODDY型・製薬企業間連合学習コンソーシアムの毒性病理領域への応用可能性と実装障壁](topics/2026/08/07_federated_learning_toxpath/report.md)
+  - [2026-08] [UNI/UNI2病理基盤モデルの動物（非ヒト）組織画像への適用事例と限界・改善策の網羅調査](topics/2026/08/11_uni_animal_pathology_transfer/report.md)
 - **基盤モデル / マルチモーダル (Foundation Models & Multimodal)**
   - [2026-08] [毒性病理画像と疾患病理画像の違い・共通点と未開拓な応用可能「ねらい目」技術](topics/2026/08/01_toxicology_vs_clinical_pathology/report.md)
   - [2026-08] [動物種横断（Cross-Species）病理基盤モデルの構築手法と形態学的相同性アライメント技術](topics/2026/08/02_cross_species_pathology_fm/report.md)
   - [2026-08] [Open TG-GATEsを活用したトキシコゲノミクス×毒性病理WSIマルチモーダルAI（Patho-TGx）の先行研究とベンチマーク調査](topics/2026/08/05_patho_toxicogenomics/report.md)
   - [2026-08] [INHAND国際オントロジー準拠のVision-Language基盤モデル＆Concept Bottleneck Model設計の先行事例調査](topics/2026/08/06_inhand_vlm_concept_bottleneck/report.md)
+  - [2026-08] [UNI/UNI2病理基盤モデルの動物（非ヒト）組織画像への適用事例と限界・改善策の網羅調査](topics/2026/08/11_uni_animal_pathology_transfer/report.md)
 - **異常検知 / 生成AI (Anomaly Detection & Generative AI)**
   - [2026-08] [対照群Normativeモデルによる反事実的異常検知（Counterfactual Anomaly Detection）の生成AIアーキテクチャ](topics/2026/08/03_counterfactual_anomaly_detection/report.md)
 - **弱教師あり学習 / MIL (Weakly Supervised Learning & MIL)**
