@@ -62,3 +62,23 @@
 - LoRA(パラメータ効率的ファインチューニング)は複数の独立した論文で共通して「ドメイン外(=種を跨ぐ場合を含む)性能を大幅に改善する」との一致した結果が出ている。これは[02](../../02_cross_species_pathology_fm/report.md)で整理した「PEFT系統」の主張と整合的。
 - 一方で、Ganz et al. 2024の「FMベース分類器はEnd-to-end学習したResNet50より頑健というわけではなかった」という指摘は、基盤モデル信奉に対する重要な反証であり、報告書で強調する価値がある。
 - 毒性病理(非腫瘍性病変)特化でのUNI利用はSlootweg 2025のみで変わらず。今回の深掘りでも新規発見はなかった。この点は02の結論を覆さない。
+
+---
+
+## 追記調査 (2026-08-21): UNIのeffective rank(実効ランク)に関する文献
+
+ユーザーからの追加質問「UNIのeffective rankに言及した論文はあるか、ヒト/毒性病理間で比較できないか」を受けて実施。
+
+| 日時 | ソース | 検索クエリ | 採用件数 | 備考 |
+|:---|:---|:---|:---:|:---|
+| 2026-08-21 | Web検索 | `UNI "effective rank" pathology foundation model embedding` | 0(直接) | RankMeという関連指標の存在を発見 |
+| 2026-08-21 | Web検索 | `"effective rank" histopathology foundation model embedding domain shift` | 0 | ドメインシフト一般論のみ |
+| 2026-08-21 | Web検索 | `"RankMe" pathology foundation model embedding rank downstream performance` | 1 | RankMe原典(Garrido et al. 2023)を特定 |
+| 2026-08-21 | WebFetch | arxiv.org/html/2601.02198 (Mind the Gap) | 1 | **主要発見**: UNI/UNI2にRankMeを適用した実例。ただしヒトデータのみ |
+| 2026-08-21 | WebFetch | arxiv.org/html/2607.22861v1 (Robustifying pathology FM via fine-tuning) | 0(effective rank言及なし、UNI/UNI2-h評価はあるがヒトのみ) | 除外(RankMe不使用) |
+| 2026-08-21 | Web検索 | `"Current Pathology Foundation Models are unrobust to Medical Center Differences"` | 1(参考) | 実効ランクではないが近縁指標(Robustness Index)を発見 |
+| 2026-08-21 | Web検索(日本語) | `UNI病理基盤モデル 実効ランク 動物 毒性病理` | 0 | 日本語文献では未発見 |
+
+### 結論
+- UNI/UNI2の実効ランク(RankMe)を明示的に測定した論文は**Möllers et al. (2026, arXiv:2601.02198)**の1件のみ発見。ただし評価対象はヒト組織(TCGA, BRACS)のみで、拡大倍率ドメインシフトの文脈で使われており、動物(毒性病理)組織との比較は行っていない。
+- **UNIの実効ランクをヒトサンプルと動物(毒性病理)サンプルで比較した研究は、探索した範囲では発見できなかった**。これは[topic 11本編](../report.md)で特定した「UNI/UNI2の系統的な種横断ゼロショット評価の不在」というギャップの一種であり、実効ランクという表現レベルの診断指標に絞ってもなお未着手であることを確認した。ユーザーが構想している比較は、探索した範囲では新規性のある分析と考えられる。

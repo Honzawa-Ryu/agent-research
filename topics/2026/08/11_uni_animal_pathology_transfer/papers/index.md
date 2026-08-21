@@ -17,6 +17,9 @@ UNI/UNI2(UNI2-h)を動物(非ヒト)病理組織画像に適用した一次研�
 | 6 | [Mitosis Detection in the Wild: Multi-Tumor and Context-Aware Generalization in the MIDOG 2025 Challenge](#paper-6) | MIDOG 2025 Challenge運営チーム (2026) | [arXiv:2606.07368](https://arxiv.org/abs/2606.07368) | ヒト・イヌ・ネコ(12腫瘍種、365症例) | ★★☆ |
 | 7 | [Beyond the Failures: Rethinking Foundation Models in Pathology](#paper-7) | (2025-2026) | [arXiv:2510.23807](https://arxiv.org/abs/2510.23807) | (直接適用なし、批評論文) | ★★☆ |
 | 8 | [Reporting transparency in veterinary pathology deep learning](#paper-8) | Banerjee, Bertram, Weiss, et al. (2026) | [DOI:10.1177/03009858261459452](https://doi.org/10.1177/03009858261459452) | (獣医病理DL全般のレビュー、既存topic02/10で既収載) | ★☆☆ |
+| 9 | [Mind the Gap: Continuous Magnification Sampling for Pathology Foundation Models](#paper-9) | Möllers et al. (2026) | [arXiv:2601.02198](https://arxiv.org/abs/2601.02198) | ヒトのみ(TCGA, BRACS) — UNI/UNI2の実効ランク(RankMe)分析の直接的な先行研究 | ★★★ |
+| 10 | [RankMe: Assessing the downstream performance of pretrained self-supervised representations by their rank](#paper-10) | Garrido, Balestriero, Najman, Lecun (2023, ICML) | [arXiv:2210.02885](https://arxiv.org/abs/2210.02885) | (病理特化ではない、実効ランク指標の原典) | ★★☆ |
+| 11 | [Current Pathology Foundation Models are unrobust to Medical Center Differences](#paper-11) | de Jong, Marcus, Teuwen (2025) | [arXiv:2501.18055](https://arxiv.org/abs/2501.18055) | ヒトのみ — 実効ランクではないが近縁の「Robustness Index」指標 | ★★☆ |
 
 ---
 
@@ -139,3 +142,44 @@ UNIを含む病理基盤モデル全般に対する批評論文。UNIを動物�
 - **著者**: Sweta Banerjee, Christof A. Bertram, Viktoria Weiss, et al.
 - **掲載**: *Veterinary Pathology* (2026) [DOI:10.1177/03009858261459452](https://doi.org/10.1177/03009858261459452)
 - **備考**: [topic 02](../../02_cross_species_pathology_fm/report.md)・[topic 10](../../10_glp_ai_validation_framework/report.md)で既収載の論文。本調査で発見した論文1〜3の著者(Banerjee, Bertram, Aubreville)と同一クラスタであることを確認する目的で再掲。獣医病理DL研究全体の再現性課題(コード公開率3%等)を指摘。
+
+---
+
+### <a id="paper-9"></a> [9] Mind the Gap: Continuous Magnification Sampling for Pathology Foundation Models
+- **著者**: Möllers et al.
+- **掲載**: arXivプレプリント (2026)
+- **リンク**: [arXiv:2601.02198](https://arxiv.org/abs/2601.02198)
+
+#### 概要
+拡大倍率(magnification)のドメインシフトを多源ドメイン適応問題として捉え、RankMe(実効ランク)指標を用いてUNI, UNI2("Uni-V2"), Virchow, Virchow2, Prov-GigaPath, Phikon-v2, H-Optimus-0, Atlasの表現品質をタスク非依存・ラベル不要で評価した研究。
+
+#### 手法のポイント
+- **RankMeの定義**: 埋め込み空間の特異値分布のスペクトルエントロピーに基づく実効ランク指標(Garrido et al. 2023の手法)。値が高いほど埋め込みが広い部分空間に分布し豊かな情報を符号化していることを示し、低いほど次元崩壊(dimensional collapse)を示唆する。
+- 離散一様サンプリング(0.25/0.5/1.0/2.0 mpp)で学習したモデルは、訓練データに存在しない中間倍率でRankMeスコアが谷になる「のこぎり歯パターン」を示す一方、連続サンプリング戦略はより滑らかなRankMeプロファイルを生む。
+
+#### 結果・貢献
+- **本調査との関連(重要)**: UNI/UNI2の実効ランクを定量評価した数少ない具体的な先行研究だが、**評価対象は全てヒト組織(TCGA, BRACS乳がんデータ)に限定**されており、動物(毒性病理)組織との実効ランク比較は行っていない。方法論(RankMeプロファイリング)はそのまま動物データへ転用可能と考えられる。
+
+---
+
+### <a id="paper-10"></a> [10] RankMe: Assessing the downstream performance of pretrained self-supervised representations by their rank
+- **著者**: Quentin Garrido, Randall Balestriero, Laurent Najman, Yann Lecun
+- **掲載**: ICML 2023
+- **リンク**: [arXiv:2210.02885](https://arxiv.org/abs/2210.02885)
+
+#### 概要
+病理特化ではない一般的な自己教師あり学習(JE-SSL)表現の評価指標としてRankMe(実効ランク)を提案した原典論文。ラベルなしで下流タスク性能を予測できる教師なし指標として、複数のSSL手法・データセットで有効性を実証。UNI含む病理基盤モデルの実効ランク分析(論文9等)はこの手法を応用したもの。
+
+---
+
+### <a id="paper-11"></a> [11] Current Pathology Foundation Models are unrobust to Medical Center Differences
+- **著者**: Edwin D. de Jong, Eric Marcus, Jonas Teuwen
+- **掲載**: arXivプレプリント (2025年1月)
+- **リンク**: [arXiv:2501.18055](https://arxiv.org/abs/2501.18055)
+
+#### 概要
+実効ランクそのものではないが近縁の概念として、UNIを含む10種の公開病理基盤モデルの埋め込み空間が、癌種等の生物学的情報より「どの医療機関由来か」という非生物学的交絡因子に強く支配されていることを示した研究。「Robustness Index」という指標(最近傍サンプルが同一施設由来か同一疾患由来かの比率に基づく)を提案。
+
+#### 結果・貢献
+- 評価対象は全てヒト組織(TCGA, CAMELYON, CPTAC等)。Virchow2を除く全モデルで施設情報が疾患情報より埋め込み空間の近さを強く決定していた。
+- **本調査との関連**: 「埋め込み空間が生物学的シグナルより非生物学的交絡因子に支配されているか」という問いは、ユーザーが検討している「UNIのヒトサンプルへの特異性」という問いと構造的に類似する。実効ランクが「情報量の総量」を測るのに対し、Robustness Indexは「その情報が生物学的か非生物学的か」を測る点で相補的な指標であり、動物データへの適用時にはこの2指標を併用することで、単に実効ランクが低い(次元崩壊)のか、実効ランクは保たれているが人種・施設のような非生物学的要因に支配されているのか、を切り分けられる可能性がある。
