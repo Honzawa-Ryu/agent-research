@@ -53,7 +53,7 @@
 
 | シート | 対象 | 状態 |
 |:---|:---|:---:|
-| numpy.md | NumPy | 未着手 |
+| [numpy.md](sheets/data/numpy.md) | NumPy | ✅ |
 | pandas.md | pandas | 未着手 |
 | sklearn.md | scikit-learn（前処理、分割、評価指標） | 未着手 |
 

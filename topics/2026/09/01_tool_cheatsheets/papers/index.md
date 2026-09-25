@@ -15,3 +15,4 @@
 | timm | https://huggingface.co/docs/timm | [timm.md](../sheets/dl/timm.md) |
 | huggingface_hub | https://huggingface.co/docs/huggingface_hub | [huggingface_hub.md](../sheets/dl/huggingface_hub.md) |
 | Weights & Biases | https://docs.wandb.ai/ | [wandb.md](../sheets/dl/wandb.md) |
+| NumPy | https://numpy.org/doc/stable/ | [numpy.md](../sheets/data/numpy.md) |
