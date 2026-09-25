@@ -2,6 +2,7 @@
 
 > 対象: `openslide-python` 1.4 系 + `openslide-bin` 4.0、`tiffslide` 4.0 系（このマシンの `.venv` で確認）
 > 公式: https://openslide.org/api/python/ ・ https://github.com/Bayer-Group/tiffslide
+> 詳細編（応用・トラブル対応）: [openslide_tiffslide_deep.md](openslide_tiffslide_deep.md)
 
 ## 1. 基本概念
 
