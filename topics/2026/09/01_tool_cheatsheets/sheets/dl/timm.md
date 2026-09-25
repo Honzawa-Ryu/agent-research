@@ -2,6 +2,7 @@
 
 > 対象: timm 1.0 系（このマシンの `.venv` は 1.0.28〜1.0.29）
 > 公式: https://huggingface.co/docs/timm ・ https://github.com/huggingface/pytorch-image-models
+> 詳細編（応用・トラブル対応）: [timm_deep.md](timm_deep.md)
 
 ## 1. 何をするライブラリか
 
