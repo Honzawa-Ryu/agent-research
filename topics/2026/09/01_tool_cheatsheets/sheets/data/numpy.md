@@ -2,6 +2,7 @@
 
 > 対象: NumPy 2.x（このマシンの `.venv` は 2.3〜2.4）
 > 公式: https://numpy.org/doc/stable/
+> 詳細編（応用・トラブル対応）: [numpy_deep.md](numpy_deep.md)
 
 ## 1. 配列を作る
 
