@@ -2,6 +2,7 @@
 
 > 対象: uv（Astral 製の Python パッケージ・プロジェクト管理ツール）。pip、venv、pip-tools、pyenv の役割をまとめて担う
 > 公式: https://docs.astral.sh/uv/
+> 詳細編（応用・トラブル対応）: [uv_deep.md](uv_deep.md)
 > 注: このマシンではホストに uv がなく、コンテナ内（Apptainer）にだけ入っている
 
 ## 1. 基本概念
