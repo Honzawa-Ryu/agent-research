@@ -13,3 +13,4 @@
 | OpenCV/Pillow | https://docs.opencv.org/ ・ https://pillow.readthedocs.io/ | [opencv_pil.md](../sheets/wsi/opencv_pil.md) |
 | PyTorch/torchvision | https://pytorch.org/docs/stable/ | [pytorch.md](../sheets/dl/pytorch.md) |
 | timm | https://huggingface.co/docs/timm | [timm.md](../sheets/dl/timm.md) |
+| huggingface_hub | https://huggingface.co/docs/huggingface_hub | [huggingface_hub.md](../sheets/dl/huggingface_hub.md) |
