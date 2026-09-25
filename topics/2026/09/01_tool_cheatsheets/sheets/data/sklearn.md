@@ -2,6 +2,7 @@
 
 > 対象: scikit-learn 1.x（このマシンの `.venv` は 1.8）
 > 公式: https://scikit-learn.org/stable/
+> 詳細編（応用・トラブル対応）: [sklearn_deep.md](sklearn_deep.md)
 
 ## 1. 共通の API
 
@@ -167,7 +168,7 @@ clf = joblib.load("model.joblib")      # 同じバージョンの scikit-learn �
 |:---|:---|
 | test の性能が高すぎる | リーク。グループ単位で分割しているか、前処理を test 込みで fit していないか確認する |
 | `ConvergenceWarning` | `max_iter` を増やす、特徴量を標準化する |
-| `roc_auc_score` でエラー | 確率ではなくラベルを渡している、または test に1クラスしかない |
+| `roc_auc_score` が nan / 値がおかしい | test（fold）に1クラスしかない（1.8 では警告付きで nan を返す）、または確率ではなくラベルを渡している |
 | `n_jobs=-1` でノードの CPU を使い切る | Slurm で確保した CPU 数より多く使ってしまう。`n_jobs=int(os.environ["SLURM_CPUS_PER_TASK"])` のように指定する |
 | 読み込んだモデルで警告・エラー | 保存時と scikit-learn のバージョンが違う |
 | 多クラスの指標が思ったより低い | `average="micro"` と `"macro"` の違い。どちらで報告するか決めておく |
