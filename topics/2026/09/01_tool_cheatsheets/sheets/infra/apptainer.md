@@ -2,6 +2,7 @@
 
 > 対象: Apptainer 1.4 系（このマシンは `apptainer 1.4.5`）。旧称 Singularity で、`singularity` コマンドも多くの環境で使える
 > 公式: https://apptainer.org/docs/user/latest/
+> 詳細編（応用・トラブル対応）: [apptainer_deep.md](apptainer_deep.md)
 
 ## 1. 基本概念
 
