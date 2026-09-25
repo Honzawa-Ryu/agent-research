@@ -29,7 +29,7 @@
 | [slurm.md](sheets/infra/slurm.md) · [詳細編](sheets/infra/slurm_deep.md) | Slurm 23.11（sbatch / srun / squeue / sacct など） | ✅ |
 | [apptainer.md](sheets/infra/apptainer.md) · [詳細編](sheets/infra/apptainer_deep.md) | Apptainer 1.4（def ファイル、build、exec、`--nv`、bind） | ✅ |
 | [uv.md](sheets/infra/uv.md) · [詳細編](sheets/infra/uv_deep.md) | uv（pyproject、lock、sync、run） | ✅ |
-| [research_template.md](sheets/infra/research_template.md) | 内製テンプレートの使い方（Makefile、`env/`、`scripts/`、`shell/` など）。**実際の使われ方に合わせて書く** | ✅ |
+| [research_template.md](sheets/infra/research_template.md) · [詳細編](sheets/infra/research_template_deep.md) | 内製テンプレートの使い方（Makefile、`env/`、`scripts/`、`shell/` など）。**実際の使われ方に合わせて書く** | ✅ |
 
 ### 1.2 WSI処理 (`sheets/wsi/`)
 
