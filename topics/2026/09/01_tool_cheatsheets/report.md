@@ -54,7 +54,7 @@
 | シート | 対象 | 状態 |
 |:---|:---|:---:|
 | [numpy.md](sheets/data/numpy.md) · [詳細編](sheets/data/numpy_deep.md) | NumPy | ✅ |
-| [pandas.md](sheets/data/pandas.md) | pandas | ✅ |
+| [pandas.md](sheets/data/pandas.md) · [詳細編](sheets/data/pandas_deep.md) | pandas | ✅ |
 | [sklearn.md](sheets/data/sklearn.md) | scikit-learn（前処理、分割、評価指標） | ✅ |
 
 ### 1.5 可視化・対話環境 (`sheets/viz/`)

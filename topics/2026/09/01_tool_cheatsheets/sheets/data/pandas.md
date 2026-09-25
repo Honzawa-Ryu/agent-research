@@ -2,6 +2,7 @@
 
 > 対象: pandas 2.x / 3.x（このマシンの `.venv` はプロジェクトにより 2.3.3 と 3.0.3 が混在）
 > 公式: https://pandas.pydata.org/docs/
+> 詳細編（応用・トラブル対応）: [pandas_deep.md](pandas_deep.md)
 
 ## 1. 読む・書く
 
