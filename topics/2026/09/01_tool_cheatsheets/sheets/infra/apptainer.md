@@ -145,7 +145,42 @@ apptainer exec --nv env.sif uv run python train.py
 - 良い点: パッケージを追加するたびにイメージを作り直さなくてよい
 - 注意: `.venv` はコンテナ内の Python に紐づく。ホストの Python から直接使うと動かないことがある
 
-## 8. よくあるハマりどころ
+## 8. CPU アーキテクチャと流用の可否
+
+SIF の中身は特定の CPU アーキテクチャ向けにビルドされたバイナリなので、**アーキテクチャが違うマシンでは同じ SIF を使えない**。ホスト側の `.venv` も同じ理由で使い回せない。
+
+| アーキテクチャ | 別名 | 例 |
+|:---|:---|:---|
+| `x86_64` | amd64 | Intel Xeon / AMD EPYC の一般的なノード（このマシンは `x86_64`） |
+| `aarch64` | arm64 | NVIDIA Grace（GH200 など）、Apple Silicon、AWS Graviton |
+
+### 流用できるもの・できないもの
+
+| 対象 | 同じアーキテクチャ | 違うアーキテクチャ |
+|:---|:---:|:---:|
+| SIF | ✅（ドライバや glibc の差には注意） | ❌ 作り直す |
+| `.venv`（ホスト側） | ✅（Python のバージョンとパスが同じなら） | ❌ 作り直す |
+| `pyproject.toml` / `uv.lock` | ✅ | ✅（lock は複数プラットフォームに対応） |
+| def ファイル | ✅ | △ ベースイメージや apt パッケージが arm64 に対応していれば使える |
+| コード・データ・モデル重み | ✅ | ✅ |
+
+### 確認と対処
+
+```bash
+uname -m                                   # ホストのアーキテクチャ
+apptainer exec env.sif uname -m            # SIF のアーキテクチャ（違う場合はエラーになる）
+file .venv/bin/python                      # .venv の Python のアーキテクチャ（シンボリックリンクなら readlink -f で実体を見る）
+
+apptainer pull --arch arm64 docker://ubuntu:24.04   # アーキテクチャを指定して pull
+```
+
+- 違うアーキテクチャのノードで使うときは、**そのノード上で** def から SIF をビルドし直し、`uv sync` で `.venv` も作り直す
+- 1つのリポジトリを両方のアーキテクチャで使う場合は、SIF と `.venv` をアーキテクチャ別に分ける（例: `env_x86_64.sif` / `env_aarch64.sif`、`UV_PROJECT_ENVIRONMENT=.venv-$(uname -m)`）
+- ベースイメージが arm64 版を提供しているか確認する（`nvidia/cuda` は多くのタグで両方ある）
+- aarch64 向けの wheel がないパッケージは、ソースからのビルドになって遅くなったり、失敗したりする
+- 同じ x86_64 でも、`-march=native` でビルドしたバイナリは古い CPU で `Illegal instruction` になることがある
+
+## 9. よくあるハマりどころ
 
 | 症状 | 原因と対処 |
 |:---|:---|
@@ -155,4 +190,6 @@ apptainer exec --nv env.sif uv run python train.py
 | ホストの設定が混ざって挙動が変わる | `~/.local` の pip パッケージや環境変数が入り込んでいる。`--cleanenv` や `--no-home` を試す |
 | `%post` で設定した変数が実行時にない | 実行時の変数は `%environment` に書く |
 | ビルドで容量不足 | `APPTAINER_TMPDIR` / `APPTAINER_CACHEDIR` を大きいディスクに向ける |
+| `exec format error` | SIF や `.venv` のアーキテクチャがホストと違う。第8節を参照 |
+| `Illegal instruction` | CPU の世代が古く、命令セットが足りない（`-march=native` でビルドしたものなど） |
 | `--fakeroot` でビルドできない | 管理者側の設定が必要。使えない場合は別の環境でビルドした SIF を持ってくる |

@@ -166,4 +166,5 @@ uv cache prune             # 使っていないものだけ削除
 | 他人の環境で動かない | `uv.lock` をコミットしていない、または `uv sync --frozen` を使っていない |
 | pip で入れたパッケージが消えた | `uv sync` は lock にないものを消す。`uv add` で入れる |
 | `.venv` を別の Python で使ったら壊れた | `.venv` は作った Python に紐づく。コンテナ内で作った `.venv` はコンテナ内で使う |
+| 別のアーキテクチャのノードで `.venv` が動かない | `.venv` は CPU アーキテクチャにも依存する。そのノードで `uv sync` し直す（[apptainer.md](apptainer.md) 第8節） |
 | ホームの容量が足りない | キャッシュが大きくなる。`UV_CACHE_DIR` を大きいディスクに向ける |
