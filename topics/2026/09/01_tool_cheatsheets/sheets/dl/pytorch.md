@@ -2,6 +2,7 @@
 
 > 対象: PyTorch 2.x（このマシンの `.venv` は `torch 2.11.0+cu130` / `torchvision 0.26.0`）
 > 公式: https://pytorch.org/docs/stable/ ・ https://pytorch.org/vision/stable/
+> 詳細編（応用・トラブル対応）: [pytorch_deep.md](pytorch_deep.md)
 
 ## 1. テンソルの基本
 
