@@ -21,8 +21,11 @@
 
 ```bash
 make setup                        # logs/ data/ outputs/ experiments/ などを作る
+export SIF_PATH="$(pwd)/env.sif"  # make uv_sync / make jupyter の前に必要
 make uv_sync p=<partition>        # Python 環境の同期を sbatch で実行する
 ```
+
+- `SIF_PATH` は各実験の `run_slurm.sh` の中でしか定義されていない。`tools/uv_sync.sh` と `tools/start_jupyter.sh` は投入元のシェルの環境変数を使うので、export していないとコンテナを起動できない
 
 シェルヘルパーを使えるようにする（`~/.bashrc` に1行追加）:
 
