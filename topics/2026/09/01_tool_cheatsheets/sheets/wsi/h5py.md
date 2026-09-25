@@ -2,6 +2,7 @@
 
 > 対象: h5py 3.x（このマシンの `.venv` は 3.16）
 > 公式: https://docs.h5py.org/
+> 詳細編（応用・トラブル対応）: [h5py_deep.md](h5py_deep.md)
 
 ## 1. 基本概念
 
