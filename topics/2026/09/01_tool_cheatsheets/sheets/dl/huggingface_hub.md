@@ -1,6 +1,6 @@
 # huggingface_hub チートシート
 
-> 対象: huggingface_hub 1.x（このマシンの `.venv` は 1.17）。CLI は `hf`（旧 `huggingface-cli` は非推奨）
+> 対象: huggingface_hub 1.x（このマシンの `.venv` は 1.17）。CLI は `hf`（旧 `huggingface-cli` は 1.17 では動かない）
 > 公式: https://huggingface.co/docs/huggingface_hub
 
 ## 1. 基本概念
@@ -98,7 +98,7 @@ hf cache verify <repo_id>     # 破損の確認
 | `HF_TOKEN` | トークン |
 | `HF_HUB_OFFLINE=1` | ネットワークに接続しない。キャッシュにあるものだけを使う |
 | `HF_HUB_DISABLE_PROGRESS_BARS=1` | プログレスバーを消す（ログが見やすくなる） |
-| `HF_HUB_ENABLE_HF_TRANSFER=1` | 高速ダウンロード（`hf_transfer` が必要） |
+| `HF_XET_HIGH_PERFORMANCE=1` | 高速ダウンロード（`hf_xet` を使う。旧 `HF_HUB_ENABLE_HF_TRANSFER` は 1.17 では非推奨で効かない） |
 
 ## 8. 計算ノードで使うパターン
 
@@ -124,5 +124,5 @@ python extract.py          # キャッシュから読み込まれる
 | `403` / `GatedRepoError` | アクセス申請をしていない、またはまだ承認されていない。モデルのページで確認する |
 | `LocalEntryNotFoundError` | オフラインモードなのにキャッシュにない。先にダウンロードする |
 | ホームの容量が足りない | キャッシュが大きい。`HF_HOME` を移し、`hf cache ls` で不要なものを消す |
-| `huggingface-cli` が見つからない / 警告が出る | 1.x では `hf` コマンドを使う |
+| `huggingface-cli` が警告を出して終了する | 1.17 では動かない。`hf` コマンドを使う |
 | ダウンロードが途中で止まる | ネットワークの制限。`--local-dir` を指定して再実行すれば途中から再開できる |
