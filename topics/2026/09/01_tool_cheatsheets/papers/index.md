@@ -12,3 +12,4 @@
 | h5py | https://docs.h5py.org/ | [h5py.md](../sheets/wsi/h5py.md) |
 | OpenCV/Pillow | https://docs.opencv.org/ ・ https://pillow.readthedocs.io/ | [opencv_pil.md](../sheets/wsi/opencv_pil.md) |
 | PyTorch/torchvision | https://pytorch.org/docs/stable/ | [pytorch.md](../sheets/dl/pytorch.md) |
+| timm | https://huggingface.co/docs/timm | [timm.md](../sheets/dl/timm.md) |
