@@ -5,3 +5,4 @@
 | ツール | 公式ドキュメント | 対応シート |
 |:---|:---|:---|
 | Slurm | https://slurm.schedmd.com/documentation.html | [slurm.md](../sheets/infra/slurm.md) |
+| Apptainer | https://apptainer.org/docs/user/latest/ | [apptainer.md](../sheets/infra/apptainer.md) |
