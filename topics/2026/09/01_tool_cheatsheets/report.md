@@ -35,7 +35,7 @@
 
 | シート | 対象 | 状態 |
 |:---|:---|:---:|
-| openslide_tiffslide.md | OpenSlide / TiffSlide（WSI の読み込み、level、read_region） | 未着手 |
+| [openslide_tiffslide.md](sheets/wsi/openslide_tiffslide.md) | OpenSlide / TiffSlide（WSI の読み込み、level、read_region） | ✅ |
 | trident.md | TRIDENT（組織検出、パッチ抽出、特徴抽出） | 未着手 |
 | h5py.md | h5py（パッチ座標・特徴量の保存と読み込み） | 未着手 |
 | opencv_pil.md | OpenCV / Pillow（画像 I/O、色空間、基本処理） | 未着手 |
