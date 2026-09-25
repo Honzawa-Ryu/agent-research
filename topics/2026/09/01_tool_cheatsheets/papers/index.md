@@ -6,3 +6,4 @@
 |:---|:---|:---|
 | Slurm | https://slurm.schedmd.com/documentation.html | [slurm.md](../sheets/infra/slurm.md) |
 | Apptainer | https://apptainer.org/docs/user/latest/ | [apptainer.md](../sheets/infra/apptainer.md) |
+| uv | https://docs.astral.sh/uv/ | [uv.md](../sheets/infra/uv.md) |
