@@ -18,3 +18,4 @@
 | NumPy | https://numpy.org/doc/stable/ | [numpy.md](../sheets/data/numpy.md) |
 | pandas | https://pandas.pydata.org/docs/ | [pandas.md](../sheets/data/pandas.md) |
 | scikit-learn | https://scikit-learn.org/stable/ | [sklearn.md](../sheets/data/sklearn.md) |
+| Matplotlib/seaborn | https://matplotlib.org/stable/ ・ https://seaborn.pydata.org/ | [matplotlib_seaborn.md](../sheets/viz/matplotlib_seaborn.md) |
