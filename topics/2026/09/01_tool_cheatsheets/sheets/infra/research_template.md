@@ -209,9 +209,11 @@ tail -n 100 logs/<exp>/latest/slurm.out
 sacct -j <job_id> --format=JobID,State,ExitCode,Elapsed,MaxRSS
 ```
 
-| status | よくある原因 |
+`run_metadata.yaml` の `status` は、ジョブの実行中に終了コードから決まるので、メモリ超過でも `FAILED`（`NONZERO_EXIT_137` など）と記録されることが多い。**本当の終了理由は `sacct` の `State` で確認する。**
+
+| sacct の State | よくある原因 |
 |:---|:---|
-| `OUT_OF_MEMORY` | `--mem` が足りない |
+| `OUT_OF_MEMORY` | `--mem` が足りない（run_metadata では `FAILED` / 終了コード 137 になりやすい） |
 | `TIMEOUT` | `--time` が足りない。延ばしたら `--partition` / `--signal` も見直す |
 | `FAILED` | コードのエラー。`slurm.out` の末尾を見る |
 | `NODE_FAIL` | ノード側の障害。再投入する |

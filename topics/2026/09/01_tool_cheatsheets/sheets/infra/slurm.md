@@ -129,7 +129,7 @@ sinfo -N -o "%N %P %T %G %C %m"           # ノード別の GPU/CPU/メモリ
 scontrol show job <id>                    # ジョブの詳細（実行中・待機中）
 scontrol show node <node>                 # ノードの詳細
 sacct -j <id> --format=JobID,JobName,State,ExitCode,Elapsed,MaxRSS,ReqMem
-sacct --me -S 2026-09-01                  # 期間を指定して履歴を出す
+sacct -u $USER -S 2026-09-01              # 期間を指定して履歴を出す（23.11 では sacct に --me はない）
 seff <id>                                 # 終了後の CPU/メモリ効率（入っていれば）
 ```
 
