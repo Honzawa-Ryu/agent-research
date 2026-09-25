@@ -55,7 +55,7 @@
 |:---|:---|:---:|
 | [numpy.md](sheets/data/numpy.md) | NumPy | ✅ |
 | [pandas.md](sheets/data/pandas.md) | pandas | ✅ |
-| sklearn.md | scikit-learn（前処理、分割、評価指標） | 未着手 |
+| [sklearn.md](sheets/data/sklearn.md) | scikit-learn（前処理、分割、評価指標） | ✅ |
 
 ### 1.5 可視化・対話環境 (`sheets/viz/`)
 
