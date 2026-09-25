@@ -47,7 +47,7 @@
 | [pytorch.md](sheets/dl/pytorch.md) | PyTorch / torchvision（Dataset、DataLoader、学習ループ、AMP、保存） | ✅ |
 | [timm.md](sheets/dl/timm.md) | timm（モデル作成、事前学習重み、特徴抽出） | ✅ |
 | [huggingface_hub.md](sheets/dl/huggingface_hub.md) | huggingface_hub（ログイン、gated モデルのダウンロード、キャッシュ） | ✅ |
-| wandb.md | Weights & Biases（ログ記録、オフライン運用） | 未着手 |
+| [wandb.md](sheets/dl/wandb.md) | Weights & Biases（ログ記録、オフライン運用） | ✅ |
 
 ### 1.4 データ・解析 (`sheets/data/`)
 
