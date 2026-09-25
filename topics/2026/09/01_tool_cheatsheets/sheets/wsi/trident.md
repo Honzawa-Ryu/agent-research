@@ -2,6 +2,7 @@
 
 > 対象: TRIDENT 0.3.0（Mahmood Lab。このマシンの `wsi_preprocess/.venv` のソースで API を確認）
 > 公式: https://github.com/mahmoodlab/TRIDENT ・ ドキュメント: https://trident-docs.readthedocs.io/
+> 詳細編（応用・トラブル対応）: [trident_deep.md](trident_deep.md)
 
 ## 1. 何をするツールか
 
