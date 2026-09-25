@@ -9,3 +9,4 @@
 | uv | https://docs.astral.sh/uv/ | [uv.md](../sheets/infra/uv.md) |
 | OpenSlide/TiffSlide | https://openslide.org/api/python/ ・ https://github.com/Bayer-Group/tiffslide | [openslide_tiffslide.md](../sheets/wsi/openslide_tiffslide.md) |
 | TRIDENT | https://github.com/mahmoodlab/TRIDENT | [trident.md](../sheets/wsi/trident.md) |
+| h5py | https://docs.h5py.org/ | [h5py.md](../sheets/wsi/h5py.md) |
