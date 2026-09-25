@@ -2,6 +2,7 @@
 
 > 対象: JupyterLab 4.x（このマシンの `.venv` は 4.5）
 > 公式: https://jupyterlab.readthedocs.io/
+> 詳細編（応用・トラブル対応）: [jupyter_deep.md](jupyter_deep.md)
 
 ## 1. 計算ノードで起動してつなぐ（全体像）
 
