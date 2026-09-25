@@ -62,7 +62,7 @@
 | シート | 対象 | 状態 |
 |:---|:---|:---:|
 | [matplotlib_seaborn.md](sheets/viz/matplotlib_seaborn.md) | Matplotlib / seaborn | ✅ |
-| jupyter.md | JupyterLab（Slurm ノード上での起動、ポート転送） | 未着手 |
+| [jupyter.md](sheets/viz/jupyter.md) | JupyterLab（Slurm ノード上での起動、ポート転送） | ✅ |
 
 ---
 
