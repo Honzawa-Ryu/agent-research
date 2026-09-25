@@ -46,7 +46,7 @@
 |:---|:---|:---:|
 | [pytorch.md](sheets/dl/pytorch.md) · [詳細編](sheets/dl/pytorch_deep.md) | PyTorch / torchvision（Dataset、DataLoader、学習ループ、AMP、保存） | ✅ |
 | [timm.md](sheets/dl/timm.md) · [詳細編](sheets/dl/timm_deep.md) | timm（モデル作成、事前学習重み、特徴抽出） | ✅ |
-| [huggingface_hub.md](sheets/dl/huggingface_hub.md) | huggingface_hub（ログイン、gated モデルのダウンロード、キャッシュ） | ✅ |
+| [huggingface_hub.md](sheets/dl/huggingface_hub.md) · [詳細編](sheets/dl/huggingface_hub_deep.md) | huggingface_hub（ログイン、gated モデルのダウンロード、キャッシュ） | ✅ |
 | [wandb.md](sheets/dl/wandb.md) | Weights & Biases（ログ記録、オフライン運用） | ✅ |
 
 ### 1.4 データ・解析 (`sheets/data/`)

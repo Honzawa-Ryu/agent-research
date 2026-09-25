@@ -2,6 +2,7 @@
 
 > 対象: huggingface_hub 1.x（このマシンの `.venv` は 1.17）。CLI は `hf`（旧 `huggingface-cli` は 1.17 では動かない）
 > 公式: https://huggingface.co/docs/huggingface_hub
+> 詳細編（応用・トラブル対応）: [huggingface_hub_deep.md](huggingface_hub_deep.md)
 
 ## 1. 基本概念
 
