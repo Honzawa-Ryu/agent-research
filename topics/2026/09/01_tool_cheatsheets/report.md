@@ -26,7 +26,7 @@
 
 | シート | 対象 | 状態 |
 |:---|:---|:---:|
-| [slurm.md](sheets/infra/slurm.md) | Slurm 23.11（sbatch / srun / squeue / sacct など） | ✅ |
+| [slurm.md](sheets/infra/slurm.md) · [詳細編](sheets/infra/slurm_deep.md) | Slurm 23.11（sbatch / srun / squeue / sacct など） | ✅ |
 | [apptainer.md](sheets/infra/apptainer.md) | Apptainer 1.4（def ファイル、build、exec、`--nv`、bind） | ✅ |
 | [uv.md](sheets/infra/uv.md) | uv（pyproject、lock、sync、run） | ✅ |
 | [research_template.md](sheets/infra/research_template.md) | 内製テンプレートの使い方（Makefile、`env/`、`scripts/`、`shell/` など）。**実際の使われ方に合わせて書く** | ✅ |

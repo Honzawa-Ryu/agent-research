@@ -2,6 +2,7 @@
 
 > 対象: Slurm 23.11 系（このマシンは `slurm-wlm 23.11.4`）
 > 公式: https://slurm.schedmd.com/documentation.html
+> 詳細編（応用・トラブル対応）: [slurm_deep.md](slurm_deep.md)
 
 ## 1. 基本概念
 
