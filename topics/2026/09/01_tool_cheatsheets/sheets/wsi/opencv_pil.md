@@ -2,6 +2,7 @@
 
 > 対象: `opencv-python`（`cv2`）、Pillow（`PIL`）12 系
 > 公式: https://docs.opencv.org/ ・ https://pillow.readthedocs.io/
+> 詳細編（応用・トラブル対応）: [opencv_pil_deep.md](opencv_pil_deep.md)
 
 ## 1. まず押さえる違い
 
