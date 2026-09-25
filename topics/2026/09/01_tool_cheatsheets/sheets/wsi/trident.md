@@ -118,7 +118,7 @@ proc.release()
 
 ```bash
 trident --version
-trident doctor                          # 環境診断
+trident-doctor                          # 環境診断（`trident doctor` より確実）
 trident convert --input_dir imgs/ --mpp_csv mpp.csv --job_dir out/   # 普通の画像をピラミッド TIFF に変換
 trident batch  -- <run_batch_of_slides の引数>
 trident single -- <run_single_slide の引数>
@@ -149,7 +149,7 @@ python run_batch_of_slides.py --task all \
 | `kaiko-vits8` など, `lunit-vits8` | |
 | `resnet50` | ImageNet（ベースライン） |
 
-組織検出: `hest`（既定）、`grandqc`、`grandqc_artifact`（アーティファクト除去）
+組織検出: `hest`（既定）、`grandqc`、`grandqc_artifact`（アーティファクト除去）、`otsu`（重み不要の単純な二値化）
 
 ### 重みの置き場所
 

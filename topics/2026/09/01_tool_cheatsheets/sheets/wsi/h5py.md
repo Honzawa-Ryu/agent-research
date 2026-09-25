@@ -49,7 +49,8 @@ with h5py.File("slide.h5", "r") as f:
 ### 構造をすばやく確認する（CLI）
 
 ```bash
-h5ls -r slide.h5                 # 構造（hdf5-tools が入っていれば）
+# h5ls / h5dump / h5repack は HDF5 の CLI ツール。このマシンには入っていない（apt の hdf5-tools などで入る）
+h5ls -r slide.h5                 # 構造
 h5dump -H slide.h5               # ヘッダ（形状・型・属性）だけ
 python -c "import h5py; h5py.File('slide.h5').visititems(lambda n, o: print(n, o))"
 ```
@@ -100,7 +101,7 @@ with h5py.File("out.h5", "a") as f:
     f.move("a", "b")                # 名前変更
 ```
 
-削除した分の容量を戻すには、`h5repack in.h5 out.h5` で作り直す。
+削除した分の容量を戻すには、`h5repack in.h5 out.h5`（HDF5 の CLI ツール）で作り直すか、必要なデータだけを新しいファイルにコピーする。
 
 ## 6. DataLoader で使うときの注意
 
