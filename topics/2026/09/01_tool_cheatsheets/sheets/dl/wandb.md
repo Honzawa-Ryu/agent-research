@@ -2,6 +2,7 @@
 
 > 対象: wandb 0.2x 系（このマシンの `.venv` は 0.27）
 > 公式: https://docs.wandb.ai/
+> 詳細編（応用・トラブル対応）: [wandb_deep.md](wandb_deep.md)
 
 ## 1. 基本概念
 
