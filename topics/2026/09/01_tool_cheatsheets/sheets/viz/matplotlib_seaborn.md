@@ -2,6 +2,7 @@
 
 > 対象: Matplotlib 3.10、seaborn 0.13（このマシンの `.venv` で確認）
 > 公式: https://matplotlib.org/stable/ ・ https://seaborn.pydata.org/
+> 詳細編（応用・トラブル対応）: [matplotlib_seaborn_deep.md](matplotlib_seaborn_deep.md)
 
 ## 1. 基本（オブジェクト指向の書き方）
 
